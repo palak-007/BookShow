@@ -1,0 +1,449 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* CSS File: styles.css */
+body{
+    background-color: #edede9;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.small-bold-text {
+    text-align: center;
+    margin-block: 30px;
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.details-section p{
+    font-size: 1.6rem;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 500px;
+}
+
+.nav-header {
+    padding: 30px;
+    background-color: #780000;
+    color: white;
+}
+
+.flex-a {
+    display: flex;
+    align-items: center;
+}
+
+.icon-name i,
+.search-bar i,
+.others i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.icon-name h1 {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.search-bar {
+    position: relative;
+    flex-grow: 1;
+}
+
+.search-bar input {
+    width: 370px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    height: 50px;
+    font-size: 1.2rem;
+    /* Allow the input to fill its container */
+}
+
+.search-bar i {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.others i {
+    /* Adjust margin between the icons as desired */
+    margin-left: 20px;
+}
+
+.nav-main {
+    background-color: #03071e;
+    /* Set the background color */
+    color: white;
+    /* Set the text color */
+    padding: 18px 0;
+    /* Add padding on top and bottom */
+}
+
+.nav-main ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-main ul li {
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.nav-main ul li:hover {
+    background-color: rgb(242, 234, 147);
+    border-radius: 5px;
+    color: black;
+}
+
+.nav-main a:hover{
+    color: black;
+}
+
+/* Styling for the hero-section */
+.hero-section {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 80px;
+    align-items: center;
+    /* background: linear-gradient(to right, #E9E2C2,#E9E2C2); */
+    background-color: rgb(233,226,194);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    
+
+}
+
+/* Styling for the text section */
+.hero-text {
+    flex: 1;
+    /* Allow the text section to take up equal space */
+    padding-right: 20px;
+    /* Add padding to the right for spacing */
+}
+
+.hero-text h2{
+    font-size: 4.1rem;
+    word-spacing: 3px;
+    font-family: monospace;
+}
+
+.hero-text p{
+    font-size: 1.6rem;
+}
+
+/* Styling for the image section */
+.hero-image {
+    flex: 1;
+    padding-left: 20px;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.primary-button {
+    margin-top: 50px;
+    background-color: #780000;
+    border-radius: 6px;
+    font-weight: 700;
+    color: white;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondar-text-color);
+    transition: 0.2s ease-out;
+}
+
+.primary-button:hover {
+    background-color: #e4b59f;
+    color: black;
+}
+
+.details-section {
+    padding: 80px;
+}
+
+.details-section p {
+    text-align: center;
+}
+
+/* new arrivals */
+
+.new-arrivals{
+    margin-bottom: 65px;
+}
+
+.new-arrivals ul {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #03071E;
+    color: white;
+    padding: 25px;
+    
+    /* border: white 2px solid; */
+}
+
+/* Style for each list item */
+.new-arrivals ul li {
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+/* Add underline on hover */
+.new-arrivals ul li:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 6px;
+    background-color: white;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.star-rating {
+    margin-bottom: 8px;
+}
+
+.star {
+    color: #FFD700;
+    font-size: 2.2rem;
+}
+
+.books .primary-button {
+    margin-top: 0%;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-shadow {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #780000;
+    padding: 20px 0;
+    /* Padding */
+    color: white;
+    margin-top: 100px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    /* Space between sections */
+    align-items: center;
+    flex-wrap: wrap;
+    /* Allow content to wrap on smaller screens */
+    padding: 0 20px;
+    /* Horizontal padding */
+}
+
+.footer-section {
+    flex: 1;
+    /* Allow each section to take equal width */
+    margin-right: 20px;
+    /* Add spacing between sections */
+}
+
+.footer-section:last-child {
+    margin-right: 0;
+    /* Remove right margin from the last section */
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    /* Margin below section heading */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.about-us {
+    margin-top: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 150px;
+    padding-right: 150px;
+    /* background-color: #edede9; */
+    background: linear-gradient(to right, #353639, #1f2021);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border: #f2e8cf;
+    color: white;
+}
+
+.about-head-left {
+    flex: 1;
+}
+
+.about-head-right {
+    flex: 1.5;
+}
+
+.about-head-right i {
+    font-size: 2.3rem;
+}
+
+.about-head-right ul {
+    margin-top: 50px;
+}
+
+span {
+    margin-left: 30px;
+    font-size: 1.9rem;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to h2 and p within hero-text */
+.hero-text h2,
+.hero-text p {
+    animation: fadeInText 1s ease-in-out 0.5s forwards;
+}
+
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Define the fade-in and bounce effect for the button */
+@keyframes fadeInBounce {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to h2 and p within hero-text */
+.hero-text h2,
+.hero-text p {
+    animation: fadeInSlideUp 1s ease-in-out 0.5s forwards;
+}
+
+/* Apply the animation to the button */
+.get-started-btn {
+    animation: fadeInBounce 1.2s ease-in-out 1s forwards;
+}
+
+/* Hover effect for the button */
+.get-started-btn:hover {
+    background-color: #fdf0d5;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu {
+    background-color: #780000; /* Replace #YOUR_COLOR_CODE with your preferred color */
+}
+
+.dropdown-item {
+    background-color: #edede9; /* Replace #YOUR_COLOR_CODE with your preferred color */
+}
+
+.btn-secondary{
+    background-color: #780000;
+}
+
+.btn-secondary:hover{
+    background-color: #780000;
+}

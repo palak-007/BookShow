@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="form-container sign-in-container">
+        <form action="#">
+            <h1>Admin Registration</h1>
+            <br><br>
+            <input type="text" placeholder="Admin Name" required>
+            <input type="text" placeholder="Book Store Name" required>
+            <input type="text" placeholder="Book Id" required>
+            <input type="number" placeholder="Phone Number" required>
+            <input type="text" placeholder="City" required>
+            <input type="email" placeholder="Email" required />
+            <div class="pass flex">
+                <input type="password" placeholder="Password" class="pass" required />
+                <input type="password" placeholder="Confirm Password" class="pass" required />
+            </div>
+            <a href="#">Forgot your password?</a>
+            <button class="primary-button"><a href="AdminDashboard.html"> Sign In</a></button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('.form-container.sign-in-container form');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Retrieve input values
+                const adminName = form.querySelector('input[placeholder="Admin Name"]').value.trim();
+                const bookStoreName = form.querySelector('input[placeholder="Book Store Name"]').value.trim();
+                const bookId = form.querySelector('input[placeholder="Book Id"]').value.trim();
+                const phoneNumber = form.querySelector('input[placeholder="Phone Number"]').value.trim();
+                const city = form.querySelector('input[placeholder="City"]').value.trim();
+                const email = form.querySelector('input[placeholder="Email"]').value.trim();
+                const password = form.querySelector('input[placeholder="Password"]').value.trim();
+                const confirmPassword = form.querySelector('input[placeholder="Confirm Password"]').value.trim();
+
+                // Validation flags
+                let isValid = true;
+
+                // Validate admin name, book store name, book id, and city
+                if (!adminName || !bookStoreName || !bookId || !city) {
+                    alert('Please fill in all required fields.');
+                    isValid = false;
+                }
+
+                // Validate email format
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    isValid = false;
+                }
+
+                const phoneRegex = /^[6-9]\d{9}$/;
+                if (!phoneRegex.test(phoneNumber)) {
+                    alert('Please enter a valid Indian phone number (10 digits starting with 6, 7, 8, or 9).');
+                    isValid = false;
+                }
+
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match.');
+                    isValid = false;
+                }
+
+                if (!password || !confirmPassword) {
+                    alert('Please fill in both password fields.');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    form.submit();
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

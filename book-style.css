@@ -1,0 +1,142 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+ .container {
+    margin-left: 0%;
+    margin-right: 0%;
+} 
+
+.upper-section {
+    height: 50vh; 
+    position: relative;
+    overflow: hidden;
+}
+
+.search-bar {
+    margin-top: 10px; /* Reduced margin between search icon and upper section */
+    text-align: center;
+    position: relative; /* Add position relative */
+}
+
+#searchInput {
+    padding: 10px;
+    width: 800px;
+    height: 45px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 24px;
+    color: black; /* Change text color to white */
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #007bff; /* Change color when focused */
+}
+.searchbttn{
+height: 60px;
+color: white;
+padding-left: 30px;
+padding-right: 30px;
+background-color: brown;
+border-radius: 5px;
+margin-left: 5px;
+font-size: 1.2rem;
+}
+
+#searchButton:hover {
+    background-color: #0056b3; /* Change color on hover */
+}
+
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/bg17.jpg'); /* Add background image URL */
+    background-size: cover;
+    background-position:top;
+    opacity: 1; /* Set opacity to 1 for a clear background image */
+}
+
+.lower-section {
+    height: 50vh; /* Adjusted height for lower section */
+    padding: 50px 0; /* Adjust padding as needed */
+    display: flex;
+    justify-content: center;
+}
+
+.book-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 190px;
+    margin-right: 190px;
+}
+
+.book-item {
+    margin: 20px;
+}
+
+.book-box {
+    width: 200px; /* Fixed width for book box */
+    height: auto; /* Adjust height as needed */
+    border: 1px solid #ccc; /* Inner border color */
+    padding: 10px;
+}
+
+.book-cover {
+    width: 100%; /* Ensure cover fills the box */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the entire box */
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-item:hover .book-cover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Keeps the default color */
+}
+
+.book-details {
+    /* line-height: 1.6; */
+    margin-top: 10px;
+    text-align: center;
+    color: #555; /* Adjust color as needed */
+}
+
+
+.book-box {
+    position: relative;
+    width: 200px; /* Fixed width for book box */
+    height: auto; /* Adjust height as needed */
+    border: 1px solid #ccc; /* Inner border color */
+    padding: 10px;
+}
+
+.add-to-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.add-to-cart button {
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart button:hover {
+    background-color: brown;
+}

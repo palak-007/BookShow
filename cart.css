@@ -1,0 +1,159 @@
+body{
+    background: linear-gradient(110deg, #8d5227 60%,#8B4513  60%);                        
+}
+        
+.shop{
+    font-size: 16px;
+}
+
+.space{
+    letter-spacing: 0.8px !important;
+}
+
+.second a:hover {
+    color: rgb(92, 92, 92) ;
+    font-weight: bold;
+}
+
+.active-2 {
+    color: rgb(92, 92, 92) 
+}
+
+#div-id{
+    background-color: #8d52275a;
+}
+
+.breadcrumb>li+li:before {
+    content: "" !important
+}
+
+.breadcrumb {
+    padding: 0px;
+    font-size: 12px;
+    color: #aaa !important;
+}
+
+.first {
+    background-color: white ;
+}
+
+a {
+    text-decoration: none !important;
+    color: #aaa ;
+}
+
+.btn-lg,.form-control-sm:focus,
+.form-control-sm:active,
+a:focus,a:active {
+    outline: none !important;
+    box-shadow: none !important
+}
+
+.form-control-sm:focus{
+    border:1.5px solid brown ; 
+}
+
+.btn-group-lg>.btn, .btn-lg {
+    padding: .5rem 0.1rem;
+    font-size: 2rem;
+    border-radius: 0;
+    color: white !important;
+    background-color: rgb(116, 65, 65);
+    height: 2.8rem !important;
+    border-radius: 0.2rem !important;
+}
+
+.btn-group-lg>.btn:hover, .btn-lg:hover {
+    background-color: #8d5227;
+}
+
+.btn-outline-primary{
+    background-color: #fff !important;
+    color:#4bb8a9 !important;
+    border-radius: 0.2rem !important;   
+    border:1px solid #4bb8a9;
+}
+
+.btn-outline-primary:hover{
+    background-color:#8d5227  !important;
+    color:#fff !important;
+    border:1px solid #8d5227;
+}
+
+.card-2{
+    margin-top: 40px !important;
+}
+
+.card-header{
+    background-color: #fff;
+    border-bottom:0px solid #aaaa !important;
+}
+
+p{
+    font-size: 20px ;
+}
+        
+.small{
+    font-size: 15px !important;
+}
+
+.form-control-sm {
+    height: calc(2.2em + .5rem + 2px);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    border-radius: 0;   
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.boxed {
+    padding: 0px 8px 0 8px ;
+    background-color: #8d5227;
+    color: white;
+}
+
+.boxed-1{
+    padding: 0px 8px 0 8px ;
+    color: black !important;
+    border: 1px solid #aaaa;
+}
+
+.bell{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .breadcrumb-item+.breadcrumb-item {
+        padding-left: 0
+    }
+}
+
+.head-1{
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.text-muted{
+    font-size: 22px;
+}
+
+.head-2{
+    font-size: 18px;
+}
+
+.form-control 
+{
+    font-size: 16px;
+}
+
+.col-head{
+    margin-left: 15px;
+}
+
+.second{
+    margin-left: 40px;
+}

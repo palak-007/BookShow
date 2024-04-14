@@ -1,0 +1,168 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="AdminDashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            color: black;
+            background-color: #fdf0d5;
+        }
+
+        h1 {
+            margin-top: 50px;
+            margin-left: 950px;
+            font-size: 56px;
+        }
+
+        .book-container {
+            width: 1300px;
+            margin-left: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .book {
+            width: 350px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 560px;
+            background-color: rgba(255, 255, 255, 0.271);
+
+        }
+
+        .book img {
+            width: 100%;
+            background-size: contain;
+            height: 70%;
+        }
+
+        .book-details {
+            margin-top: 10px;
+            line-height: 30px;
+        }
+
+        .book-details h2 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .book-details p {
+            font-size: 22px;
+            margin: 0;
+        }
+
+        #row-2 {
+            margin-top: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="head-section">
+                <p class="user-name" style="color: white;">Admin Name</p>
+            </div>
+            <div class="list-section">
+                <a href="AdminDashboard.html">
+                    <p>My Details</p>
+                </a>
+                <a href="addBook.html">
+                    <p>Add A Book<p>
+                </a>
+                <a href="editDetails.html">
+                    <p>Edit Details<p>
+                </a>
+                <a href="borrowedBooks.html">
+                    <p>Borrowed Books</p>
+                </a>
+            </div>
+        </div>
+        <div class="right-section">
+            <h1>BORROWED BOOKS</h1>
+            <div class="grid">
+                <div class="book-container">
+                    <div class="book">
+                        <img src="images/book-1.jpeg" alt="Book 1">
+                        <div class="book-details">
+                            <h2>The Great Gatsby</h2>
+                            <p>Author: F Scott</p>
+                            <p>Genre: Fantasy</p>
+                            <p>Borrowed by: Ronit</p>
+                            <p>Borrowed Date: 10/04/2024</p>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <img src="images/book-2.png" alt="Book 2">
+                        <div class="book-details">
+                            <h2>The Book Thief</h2>
+                            <p>Author: Markus Zusak</p>
+                            <p>Genre: Thriller</p>
+                            <p>Borrowed by: Avinash</p>
+                            <p>Borrowed Date: 10/02/2024</p>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <img src="images/book-3.jpg" alt="Book 3">
+                        <div class="book-details">
+                            <h2>the CATCHER in RYE</h2>
+                            <p>Author: J D Salinger</p>
+                            <p>Genre: Fantasy</p>
+                            <p>Borrowed by: Smrita</p>
+                            <p>Borrowed Date: 05/02/2024</p>
+                        </div>
+                    </div>
+
+                    <div id="row-2" class="book">
+                        <img src="images/book-4.jpg" alt="Book 1">
+                        <div class="book-details">
+                            <h2>The Little Prince</h2>
+                            <p>Author: Antonio de Saint-Exupery</p>
+                            <p>Genre: Fantasy</p>
+                            <p>Borrowed by: Mitali</p>
+                            <p>Borrowed Date: 25/01/2024</p>
+                        </div>
+                    </div>
+                    <div id="row-2" class="book">
+                        <img src="images/book-5.jpg" alt="Book 2">
+                        <div class="book-details">
+                            <h2>A teaspoon of Earth and Sea</h2>
+                            <p>Author: Dina Nayer</p>
+                            <p>Genre: Science and Fiction</p>
+                            <p>Borrowed by: Nitya</p>
+                            <p>Borrowed Date: 30/01/2024</p>
+                        </div>
+                    </div>
+                    <div id="row-2" class="book">
+                        <img src="images/book-6.jpeg" alt="Book 3">
+                        <div class="book-details">
+                            <h2>Brave New World</h2>
+                            <p>Author: Aldous Huxley</p>
+                            <p>Genre: Science and Fiction</p>
+                            <p>Borrowed by: Prakhar</p>
+                            <p>Borrowed Date: 20/10/2023</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

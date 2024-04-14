@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    color: white;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+}
+
+.head-section{
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 60px;
+}
+
+.left-section{
+    display: flex;
+    flex-direction: column;
+    background-color: #780000;
+    z-index: 1000;
+    height: 100%;
+    position: fixed;
+    width: 25%;
+}
+
+.list-section p {
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-style: italic;
+    margin-left: 100px;
+    transition: transform 0.3s ease; /* Adding transition for smooth effect */
+}
+
+.list-section p:hover {
+    transform: scale(1.1); /* Enlarging and slightly rotating the paragraph on hover */
+    color: white; /* Changing text color to a vibrant shade */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adding a subtle text shadow */
+}
+
+.user-name{
+    display: inline-block;
+    font-family: Noticia Text;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.user-icon{
+    height: 40px;
+    width: 40px;
+}
+
+.right-section{
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.store-1-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+}
+
+.add-section{
+    display: none;
+    position: absolute;
+    margin-top: 1200px;
+    margin-left: 1100px ;
+}
+
+.store-name{
+    position: absolute;
+    left: 700;
+    /* top: 4; */
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.store-name h1{
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}

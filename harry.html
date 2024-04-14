@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter - Book Details</title>
+    <link rel="stylesheet" href="book-style.css"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* background: linear-gradient(left to right, #8B4513, #BC8F8F);   */
+            background-color:#780000          
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            border: 5px solid rgb(197, 134, 134);
+            box-shadow: #908787;
+            border-radius: 10px;
+            margin-top: 100px;
+            background-color: #eae4df;           
+
+        }
+
+        .book-cover {
+            max-width: 300px;
+            height: 400px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            margin-right: 20px;
+        }
+
+        .book-intro {
+            flex: 1 1 300px;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .book-details {
+            background-color: #fff;
+            padding: 20px;
+            font-size: 1.4rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 100%;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container bookdetail">
+        <div class="book-intro">
+            <img src="images/book4.png" alt="Harry Potter Book Cover" class="book-cover">
+        </div>
+        <div class="book-intro">
+            <h1>Harry Potter</h1>
+            <p><strong>Author:</strong> J.K. Rowling</p>
+            <p><strong>Price:</strong> $7.00 per day</p>
+            <p><strong>Days Allowed to Rent:</strong> 14</p>
+            <p><strong>Bookstore:</strong> Rainy Drops</p>
+            <p><strong>Copies Available:</strong> 5</p>
+        </div>
+        <div class="book-details">
+            <p>"Harry Potter" is a beloved fantasy novel series written by J.K. Rowling. It follows the journey of a young wizard named Harry Potter and his friends Hermione Granger and Ron Weasley as they attend Hogwarts School of Witchcraft and Wizardry. The series delves into themes of friendship, courage, and the battle between good and evil as Harry discovers his true identity and confronts the dark wizard Lord Voldemort. With its captivating storytelling and richly imagined magical world, "Harry Potter" has captured the hearts of readers worldwide and become a cultural phenomenon.</p>
+                 </div>
+    </div>
+</body>
+</html>

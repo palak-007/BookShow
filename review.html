@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reviews</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        /* CSS Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #780000;
+    color: white;
+}
+
+.container {
+    max-width: 800px;
+    margin: 120px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.review {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: black;
+    font-size: 2.1rem;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.review-form {
+    margin-top: 20px;
+}
+
+.review-form input[type="text"],
+.review-form textarea,
+.review-form input[type="number"],
+.review-form input[type="submit"],
+.review-form select { /* Added select element */
+    width: 90%;
+    padding: 10px;
+    margin-left: 35px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.4rem;
+}
+
+.review-form input[type="submit"] {
+    background-color: brown;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.review-form input[type="submit"]:hover {
+    background-color: brown;
+}
+
+.search-form input[type="text"] {
+    margin-left: 35px;
+    margin-right: 10px;
+}
+
+.search-form input[type="text"],
+.search-form input[type="submit"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.4rem;
+}
+
+.search-form input[type="submit"] {
+    background-color: brown;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-form input[type="submit"]:hover {
+    background-color: brown;
+}
+
+#submittedReviews {
+    color: black;
+    font-size: 1.4rem;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Reviews</h1>
+
+        <!-- Search form -->
+        <div class="search-form">
+            <h2>Search for Reviews</h2>
+            <form id="searchForm">
+                <input type="text" name="bookTitle" id="bookTitle" placeholder="Enter Book Title" required>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+
+        <!-- Display search results -->
+        <div id="searchResults"></div>
+
+        <!-- Review form -->
+        <div class="review-form">
+            <h2>Add Your Review</h2>
+            <form id="reviewForm">
+                <select id="bookTitle" name="bookTitle" required>
+                    <option value="" selected disabled>Select Book Title</option>
+                    <option value="Harry Potter">Harry Potter</option>
+                    <option value="The Past Is Rising">The Past Is Rising</option>
+                    <option value="Spearhead">Spearhead</option>
+                    <option value="The Great Gatsby">The Great Gatsby</option>
+                    <option value="Pride and Prejudice">Pride and Prejudice</option>
+                </select>
+                <input type="text" name="userName" id="userName" placeholder="Your Name" required>
+                <textarea name="review" id="review" cols="30" rows="5" placeholder="Write your review here..." required></textarea>
+                <input type="number" name="rating" id="rating" min="1" max="5" step="0.5" placeholder="Rating (1-5)" required>
+                <input type="submit" value="Submit Review">
+            </form>
+        </div>
+
+        <!-- Container to display submitted reviews -->
+        <div id="submittedReviews"></div>
+    </div>
+
+    <script>
+        var reviews = [
+    { bookTitle: "Harry Potter", userName: "Amit", review: "Great book!", rating: 4 },
+    { bookTitle: "wonderful wizard", userName: "david", review: "Awesome read!", rating: 5 },
+    { bookTitle: "caught", userName: "ana", review: "Not bad.", rating: 3.5 }
+];
+
+        document.getElementById('reviewForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form values
+            var bookTitle = document.getElementById('bookTitle').value;
+            var userName = document.getElementById('userName').value;
+            var review = document.getElementById('review').value;
+            var rating = document.getElementById('rating').value;
+
+            // Create review element
+            var reviewElement = document.createElement('div');
+            reviewElement.classList.add('review');
+            reviewElement.innerHTML = '<h2>' + userName + '</h2>' +
+                                      '<p>Book: ' + bookTitle + '</p>' +
+                                      '<p>Rating: ' + rating + '/5</p>' +
+                                      '<p>' + review + '</p>';
+
+            // Append review to the container
+            document.getElementById('submittedReviews').appendChild(reviewElement);
+
+            // Reset form
+            document.getElementById('reviewForm').reset();
+        });
+
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form value
+            var bookTitle = document.getElementById('bookTitle').value;
+
+            // Perform search (not implemented in this example)
+            // Display search results (not implemented in this example)
+        });
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get form value
+    var bookTitle = document.getElementById('bookTitle').value;
+
+    // Find review matching the book title
+    var matchingReviews = reviews.filter(function(review) {
+        return review.bookTitle.toLowerCase() === bookTitle.toLowerCase();
+    });
+
+    // Display search results
+    var searchResultsContainer = document.getElementById('searchResults');
+    searchResultsContainer.innerHTML = '';
+
+    if (matchingReviews.length === 0) {
+        searchResultsContainer.innerHTML = '<p>No reviews found for the book.</p>';
+    } else {
+        matchingReviews.forEach(function(review) {
+            var reviewElement = document.createElement('div');
+            reviewElement.classList.add('review');
+            reviewElement.innerHTML = '<h2>' + review.userName + '</h2>' +
+                                      '<p>Book: ' + review.bookTitle + '</p>' +
+                                      '<p>Rating: ' + review.rating + '/5</p>' +
+                                      '<p>' + review.review + '</p>';
+            searchResultsContainer.appendChild(reviewElement);
+        });
+    }
+});
+
+    </script>
+</body>
+</html>
